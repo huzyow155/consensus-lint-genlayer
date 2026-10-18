@@ -1,0 +1,35 @@
+{
+  "network": "GenLayer Studionet (Preview)",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "deployer": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+  "deployedAt": "2026-10-18T08:06:39.366Z",
+  "contracts": {
+    "ConsensusLint": {
+      "address": "0xE2cBaf1916Df7C742486B2eC4E5d3A3289115F2D",
+      "deployTxHash": "0x0f93a3a8679b5ed4e3e7c7acbf848b219834481a91a636e2006d0e3955c1faed",
+      "sourceSha256": "04337cfc91fe45f76042dba860adf4d9f1567e68fabb525838fa7dffaf4d313b",
+      "status": "ACCEPTED",
+      "agreement": "3/5",
+      "elapsedSeconds": 8.85
+    },
+    "HygieneBadges": {
+      "address": "0x3CA9E1b7804b442eaA932ae190d494D4A59295bF",
+      "deployTxHash": "0xeef694c69810f8b4f0c16667bffc0b5784d4302617e2136fd7fadf993fd6c609",
+      "sourceSha256": "64181bc3a3965e9427039a8dec504f0c25aeb4e7e9186b54ba426aadb5bb48b8",
+      "status": "ACCEPTED",
+      "agreement": "3/5",
+      "elapsedSeconds": 5.9,
+      "ledgerAddress": "0xe2cbaf1916df7c742486b2ec4e5d3a3289115f2d",
+      "setLedgerTxHash": "0x7c5de5bd4d971573b2d555a0b6bb31b6fbfdad93e82c78521f495a52f249e328",
+      "setLedgerAgreement": "3/5",
+      "setLedgerElapsedSeconds": 5.68
+    },
+    "Probe": {
+      "address": "0xCAF2c7cdBD0a6EB4154b763c9fA869407CcCb7b6",
+      "deployTxHash": "0xf00fa3b5d292ddf1e77aee476a82d8993a41f75f8cd2205cd0955b5e315a76f8",
+      "status": "superseded diagnostic probe",
+      "role": "Phase 0 runtime probe contract"
+    }
+  }
+}

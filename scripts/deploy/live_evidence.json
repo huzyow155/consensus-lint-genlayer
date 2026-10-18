@@ -1,0 +1,1212 @@
+{
+  "network": "GenLayer Studionet (Preview)",
+  "chainId": 61999,
+  "timestamp": "2026-10-18T08:11:34.442Z",
+  "contracts": {
+    "ConsensusLint": "0xE2cBaf1916Df7C742486B2eC4E5d3A3289115F2D",
+    "HygieneBadges": "0x3CA9E1b7804b442eaA932ae190d494D4A59295bF"
+  },
+  "targets": {
+    "good_contract": {
+      "label": "GoodContract Fixture",
+      "series": "Fixtures",
+      "url": "https://raw.githubusercontent.com/huzyow155/consensus-lint-fixtures/main/good_contract.py",
+      "tid": "2bac0b36b071",
+      "registrationTxHash": "0xe34599052b017303aa4f76166cfe6d73a52b3c860db0fc5d28e87f235f01ffc0",
+      "registrationElapsed": 6.16,
+      "registrationAgreement": "3/5",
+      "auditTxHash": "0xac076107559e4f790a81124e95502ce80f90fa5930255f98bfcd4bd02efe6208",
+      "auditElapsed": 22.58,
+      "auditAgreement": "3/5",
+      "summary": {
+        "id": "2bac0b36b071",
+        "label": "GoodContract Fixture",
+        "latest_grade": "A",
+        "latest_n": 1,
+        "latest_score": 94,
+        "latest_source_sha256": "1079ccc7c3fac6c7e365b153c0ac1165bad0f7551d9c06e11df5283dab719d77",
+        "ref_kind": "MUTABLE_REF",
+        "truncated": false
+      },
+      "auditRecord": {
+        "at": "2026-10-18T08:07:59Z",
+        "auditor": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "findings": {},
+        "grade": "A",
+        "judgements": [
+          {
+            "fn": "validator_fn",
+            "id": "J1",
+            "label": "RECOMPUTES",
+            "line_start": 75,
+            "quote": "val_sand = gl.vm.spawn_sandbox(val_fetch)\n            if not isinstance(val_sand, gl.vm.Return):\n                return False\n            return val_sand.calldata == ldata.get(\"sha256\")",
+            "quote_verified": true,
+            "site": 0
+          },
+          {
+            "fn": "validator_fn",
+            "id": "J2",
+            "label": "FREE_TEXT_OR_PAYLOAD",
+            "line_start": 75,
+            "quote": "return val_sand.calldata == ldata.get(\"sha256\")",
+            "quote_verified": true,
+            "site": 0
+          }
+        ],
+        "mode": "CONTRACT",
+        "model_penalty": 6,
+        "n": 1,
+        "responses": [],
+        "score": 94,
+        "sdk_pin": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+        "source_bytes": 4334,
+        "source_sha256": "1079ccc7c3fac6c7e365b153c0ac1165bad0f7551d9c06e11df5283dab719d77",
+        "target_id": "2bac0b36b071",
+        "truncated": false,
+        "ts": 1792310879
+      }
+    },
+    "bad_contract": {
+      "label": "BadContract Fixture",
+      "series": "Fixtures",
+      "url": "https://raw.githubusercontent.com/huzyow155/consensus-lint-fixtures/main/bad_contract.py",
+      "tid": "9bd135be77a6",
+      "registrationTxHash": "0x70cf2f5a9c3a89143c0735f1281a338e2a7b787032044c0532a0009f8e4f6d65",
+      "registrationElapsed": 6.03,
+      "registrationAgreement": "3/5",
+      "auditTxHash": "0xdff2cc66ff68a5f1fcef2b0822bed2555ef952d69e78198a93c02da2450bb119",
+      "auditElapsed": 22.48,
+      "auditAgreement": "3/5",
+      "summary": {
+        "id": "9bd135be77a6",
+        "label": "BadContract Fixture",
+        "latest_grade": "F",
+        "latest_n": 1,
+        "latest_score": 0,
+        "latest_source_sha256": "394a711bae4fc8b8a45d5d1f1fef7497efd1ec294ee3b128d180201c026ad7e8",
+        "ref_kind": "MUTABLE_REF",
+        "truncated": false
+      },
+      "auditRecord": {
+        "at": "2026-10-18T08:08:39Z",
+        "auditor": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "findings": {
+          "CL01": {
+            "count": 1,
+            "items": [
+              {
+                "line": 1,
+                "snippet": "# v0.1.0"
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "MINOR"
+          },
+          "CL02": {
+            "count": 1,
+            "items": [
+              {
+                "line": 2,
+                "snippet": "# Intentionally invalid header and dependency line"
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "MAJOR"
+          },
+          "CL03": {
+            "count": 1,
+            "items": [
+              {
+                "line": 3,
+                "snippet": "# Non-ASCII character present: \u2022 (bullet)"
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "MINOR"
+          },
+          "CL05": {
+            "count": 1,
+            "items": [
+              {
+                "line": 16,
+                "snippet": "self.store[\"initialized\"] = \"true\""
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "MAJOR"
+          },
+          "CL06": {
+            "count": 1,
+            "items": [
+              {
+                "line": 19,
+                "snippet": "def unsafe_write(self, message: str, url: str) -> None:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          },
+          "CL07": {
+            "count": 1,
+            "items": [
+              {
+                "line": 54,
+                "snippet": "res = gl.eq_principle.strict_eq(bad_strict)"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MAJOR"
+          },
+          "CL08": {
+            "count": 2,
+            "items": [
+              {
+                "line": 33,
+                "snippet": "fetch_res = gl.nondet.web.get(url)"
+              },
+              {
+                "line": 37,
+                "snippet": "raw_model = gl.nondet.exec_prompt(prompt)"
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "MAJOR"
+          },
+          "CL09": {
+            "count": 1,
+            "items": [
+              {
+                "line": 60,
+                "snippet": "def validator_fn(leader_res):"
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "CRITICAL"
+          },
+          "CL10": {
+            "count": 1,
+            "items": [
+              {
+                "line": 60,
+                "snippet": "def validator_fn(leader_res):"
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "MAJOR"
+          },
+          "CL11": {
+            "count": 1,
+            "items": [
+              {
+                "line": 69,
+                "snippet": "return True"
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "MAJOR"
+          },
+          "CL12": {
+            "count": 1,
+            "items": [
+              {
+                "line": 40,
+                "snippet": "try:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MAJOR"
+          },
+          "CL13": {
+            "count": 1,
+            "items": [
+              {
+                "line": 30,
+                "snippet": "current_time = datetime.datetime.now()"
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "MAJOR"
+          },
+          "CL14": {
+            "count": 2,
+            "items": [
+              {
+                "line": 27,
+                "snippet": "assert len(url) > 0, \"url cannot be empty\""
+              },
+              {
+                "line": 24,
+                "snippet": "raise ValueError(\"invalid url prefix\")"
+              }
+            ],
+            "method": "STRUCTURAL",
+            "severity": "MINOR"
+          },
+          "CL15": {
+            "count": 1,
+            "items": [
+              {
+                "line": 22,
+                "snippet": "if not url.startswith(\"https://\"):"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MAJOR"
+          },
+          "CL16": {
+            "count": 1,
+            "items": [
+              {
+                "line": 19,
+                "snippet": "def unsafe_write(self, message: str, url: str) -> None:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          },
+          "CL17": {
+            "count": 1,
+            "items": [
+              {
+                "line": 74,
+                "snippet": "def get_all_records(self) -> list[str]:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          },
+          "CL18": {
+            "count": 1,
+            "items": [
+              {
+                "line": 37,
+                "snippet": "raw_model = gl.nondet.exec_prompt(prompt)"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "INFO"
+          }
+        },
+        "grade": "F",
+        "judgements": [
+          {
+            "fn": "validator_fn",
+            "id": "J1",
+            "label": "COMPARES_ONLY",
+            "line_start": 60,
+            "quote": "# CL09: does not independently recompute verdict, only checks leader data\n                valid = (data == \"LEADER_PAYLOAD\")\n                return valid",
+            "quote_verified": true,
+            "site": 0
+          },
+          {
+            "fn": "validator_fn",
+            "id": "J2",
+            "label": "FREE_TEXT_OR_PAYLOAD",
+            "line_start": 60,
+            "quote": "valid = (data == \"LEADER_PAYLOAD\")",
+            "quote_verified": true,
+            "site": 0
+          },
+          {
+            "fn": "unsafe_write",
+            "id": "J3",
+            "label": "NOT_ISOLATED",
+            "line_start": 19,
+            "quote": "# CL18: public message directly interpolated into prompt without sanitization\n        prompt = f\"Analyze this user message: {message}\"\n        raw_model = gl.nondet.exec_prompt(prompt)",
+            "quote_verified": true,
+            "site": 0
+          }
+        ],
+        "mode": "CONTRACT",
+        "model_penalty": 16,
+        "n": 1,
+        "responses": [],
+        "score": 0,
+        "sdk_pin": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+        "source_bytes": 2655,
+        "source_sha256": "394a711bae4fc8b8a45d5d1f1fef7497efd1ec294ee3b128d180201c026ad7e8",
+        "target_id": "9bd135be77a6",
+        "truncated": false,
+        "ts": 1792310919
+      }
+    },
+    "mixed_contract": {
+      "label": "MixedContract Fixture",
+      "series": "Fixtures",
+      "url": "https://raw.githubusercontent.com/huzyow155/consensus-lint-fixtures/main/mixed_contract.py",
+      "tid": "c3e533a5f89e",
+      "registrationTxHash": "0x97e4e3646f171dbfa046ef7004822e80f40c1f894e80510b8527298209a78126",
+      "registrationElapsed": 5.63,
+      "registrationAgreement": "3/5",
+      "auditTxHash": "0x05918df9e749015476439244b09b5994801b9f1d24793e97442d6c162b9afb62",
+      "auditElapsed": 12.45,
+      "auditAgreement": "3/5",
+      "summary": {
+        "id": "c3e533a5f89e",
+        "label": "MixedContract Fixture",
+        "latest_grade": "B",
+        "latest_n": 1,
+        "latest_score": 86,
+        "latest_source_sha256": "7117023c4a289d65556f7c93eacec452c736bf2088ee51ca1a7101626b01f770",
+        "ref_kind": "MUTABLE_REF",
+        "truncated": false
+      },
+      "auditRecord": {
+        "at": "2026-10-18T08:12:14Z",
+        "auditor": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "findings": {
+          "CL15": {
+            "count": 1,
+            "items": [
+              {
+                "line": 27,
+                "snippet": "if not site_url.startswith(\"https://\"):"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MAJOR"
+          },
+          "CL16": {
+            "count": 1,
+            "items": [
+              {
+                "line": 21,
+                "snippet": "def update_profile(self, display_name: str, site_url: str) -> None:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          },
+          "CL17": {
+            "count": 1,
+            "items": [
+              {
+                "line": 35,
+                "snippet": "def get_all_profiles(self) -> list[str]:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          }
+        },
+        "grade": "B",
+        "judgements": [],
+        "mode": "CONTRACT",
+        "model_penalty": 0,
+        "n": 1,
+        "responses": [],
+        "score": 86,
+        "sdk_pin": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+        "source_bytes": 1320,
+        "source_sha256": "7117023c4a289d65556f7c93eacec452c736bf2088ee51ca1a7101626b01f770",
+        "target_id": "c3e533a5f89e",
+        "truncated": false,
+        "ts": 1792311134
+      }
+    },
+    "not_a_contract": {
+      "label": "NotAContract Fixture",
+      "series": "Fixtures",
+      "url": "https://raw.githubusercontent.com/huzyow155/consensus-lint-fixtures/main/not_a_contract.py",
+      "tid": "fc8f14409f6b",
+      "registrationTxHash": "0x65fecc13dc07ed362654e7e28d845e8b21af6e7b4e8eac027526efb5c597b445",
+      "registrationElapsed": 8.7,
+      "registrationAgreement": "3/5",
+      "auditTxHash": "0xb2cd69f4f5bb7f47bcb83177e84c6571339777b8f395aeb6087e084bee2cb3cf",
+      "auditElapsed": 12.35,
+      "auditAgreement": "3/5",
+      "summary": {
+        "id": "fc8f14409f6b",
+        "label": "NotAContract Fixture",
+        "latest_grade": "N/A",
+        "latest_n": 1,
+        "latest_score": -1,
+        "latest_source_sha256": "a39c9aaa565ea200ebfe9ca01e32b7e7da64ea24b9753fe8d0ea6c27b8b1ef6b",
+        "ref_kind": "MUTABLE_REF",
+        "truncated": false
+      },
+      "auditRecord": {
+        "at": "2026-10-18T08:12:46Z",
+        "auditor": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "findings": {},
+        "grade": "N/A",
+        "judgements": [],
+        "mode": "NOT_A_CONTRACT",
+        "model_penalty": 0,
+        "n": 1,
+        "responses": [],
+        "score": -1,
+        "sdk_pin": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+        "source_bytes": 466,
+        "source_sha256": "a39c9aaa565ea200ebfe9ca01e32b7e7da64ea24b9753fe8d0ea6c27b8b1ef6b",
+        "target_id": "fc8f14409f6b",
+        "truncated": false,
+        "ts": 1792311166
+      }
+    },
+    "shell_like": {
+      "label": "ShellLike Large Fixture",
+      "series": "Fixtures",
+      "url": "https://raw.githubusercontent.com/huzyow155/consensus-lint-fixtures/main/shell_like.py",
+      "tid": "dca608d38708",
+      "registrationTxHash": "0xffcf75e987ddfc8dbd0faf9d38661c79b5c55ad519658f041a8850c3443c9bc2",
+      "registrationElapsed": 5.46,
+      "registrationAgreement": "3/5",
+      "auditTxHash": "0xd52ffe6ba839557d5e1db354325e63ce34631bc9c5b1e373285c753035d7d9e9",
+      "auditElapsed": 9.39,
+      "auditAgreement": "3/5",
+      "summary": {
+        "id": "dca608d38708",
+        "label": "ShellLike Large Fixture",
+        "latest_grade": "B",
+        "latest_n": 1,
+        "latest_score": 100,
+        "latest_source_sha256": "ecacf220db2e27fd1bd9ce6613848b0ddb91aa8e2845d7091e90123778cbde74",
+        "ref_kind": "MUTABLE_REF",
+        "truncated": true
+      },
+      "auditRecord": {
+        "at": "2026-10-18T08:13:15Z",
+        "auditor": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "findings": {},
+        "grade": "B",
+        "judgements": [],
+        "mode": "CONTRACT",
+        "model_penalty": 0,
+        "n": 1,
+        "responses": [],
+        "score": 100,
+        "sdk_pin": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+        "source_bytes": 196016,
+        "source_sha256": "ecacf220db2e27fd1bd9ce6613848b0ddb91aa8e2845d7091e90123778cbde74",
+        "target_id": "dca608d38708",
+        "truncated": true,
+        "ts": 1792311195
+      }
+    },
+    "evolving_contract": {
+      "label": "EvolvingContract Fixture",
+      "series": "Fixtures",
+      "url": "https://raw.githubusercontent.com/huzyow155/consensus-lint-fixtures/main/evolving_contract.py",
+      "tid": "2a4fabcda5ed",
+      "registrationTxHash": "0xb1e511e54bcbf48424f64e8f367009e08b5727a74435f3e18349ab16d4f337dc",
+      "registrationElapsed": 8.64,
+      "registrationAgreement": "3/5",
+      "auditTxHash": "0x681b94d2474c2f469c5a71824746a97f837fcada101d5efc080f95f571a11996",
+      "auditElapsed": 8.74,
+      "auditAgreement": "3/5",
+      "summary": {
+        "id": "2a4fabcda5ed",
+        "label": "EvolvingContract Fixture",
+        "latest_grade": "B",
+        "latest_n": 1,
+        "latest_score": 83,
+        "latest_source_sha256": "0efc8681b2c5497607109bf017e3cff3ca49c5e22f934ebc726afc911544b3d9",
+        "ref_kind": "MUTABLE_REF",
+        "truncated": false
+      },
+      "auditRecord": {
+        "at": "2026-10-18T08:13:44Z",
+        "auditor": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "findings": {
+          "CL15": {
+            "count": 1,
+            "items": [
+              {
+                "line": 23,
+                "snippet": "if not ref_url.startswith(\"https://\"):"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MAJOR"
+          },
+          "CL16": {
+            "count": 2,
+            "items": [
+              {
+                "line": 21,
+                "snippet": "def post_status(self, message: str, ref_url: str) -> None:"
+              },
+              {
+                "line": 21,
+                "snippet": "def post_status(self, message: str, ref_url: str) -> None:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          },
+          "CL17": {
+            "count": 1,
+            "items": [
+              {
+                "line": 33,
+                "snippet": "def get_history(self) -> list[str]:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          }
+        },
+        "grade": "B",
+        "judgements": [],
+        "mode": "CONTRACT",
+        "model_penalty": 0,
+        "n": 1,
+        "responses": [],
+        "score": 83,
+        "sdk_pin": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+        "source_bytes": 1182,
+        "source_sha256": "0efc8681b2c5497607109bf017e3cff3ca49c5e22f934ebc726afc911544b3d9",
+        "target_id": "2a4fabcda5ed",
+        "truncated": false,
+        "ts": 1792311224
+      },
+      "audit2": {
+        "txHash": "0xe0d983147b53278910697608c0b9163b55c68d588e144095275483b54a7153e8",
+        "agreement": "3/5",
+        "auditRecord": {
+          "at": "2026-10-18T08:19:14Z",
+          "auditor": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+          "findings": {},
+          "grade": "A",
+          "judgements": [],
+          "mode": "CONTRACT",
+          "model_penalty": 0,
+          "n": 2,
+          "responses": [],
+          "score": 100,
+          "sdk_pin": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+          "source_bytes": 1481,
+          "source_sha256": "8d06354a181741817ea9fcfa85ac3959493299073e60b21edbf420e51e3258ec",
+          "target_id": "2a4fabcda5ed",
+          "truncated": false,
+          "ts": 1792311554
+        }
+      }
+    }
+  },
+  "self_lint": {
+    "ConsensusLint": {
+      "label": "ConsensusLint Ledger Contract",
+      "series": "ConsensusLint Core",
+      "url": "https://raw.githubusercontent.com/huzyow155/consensus-lint-genlayer/main/contracts/ConsensusLint.py",
+      "tid": "09534c63a674",
+      "registrationTxHash": "0xcf663b5cc28a03677639688a4a7f3561cf3ae85651b95e952f70bf6f1dee602a",
+      "registrationAgreement": "3/5",
+      "auditTxHash": "0x79486100dde3d3a0bb81b3c89725f2e43833e2b70e90902929d460bdb1cedfd5",
+      "auditAgreement": "3/5",
+      "summary": {
+        "id": "09534c63a674",
+        "label": "ConsensusLint Ledger Contract",
+        "latest_grade": "B",
+        "latest_n": 1,
+        "latest_score": 90,
+        "latest_source_sha256": "8292c7ffd042fe70647ce593ebfb33728a00e3acc28eeb8b9d148947f7dbbf33",
+        "ref_kind": "MUTABLE_REF",
+        "truncated": true
+      },
+      "auditRecord": {
+        "at": "2026-10-18T08:14:12Z",
+        "auditor": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "findings": {
+          "CL06": {
+            "count": 1,
+            "items": [
+              {
+                "line": 1165,
+                "snippet": "def respond_to_finding(self, target_id: str, audit_n: int, rule_id: str, stance: str, note: str) -> None:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          },
+          "CL16": {
+            "count": 1,
+            "items": [
+              {
+                "line": 1165,
+                "snippet": "def respond_to_finding(self, target_id: str, audit_n: int, rule_id: str, stance: str, note: str) -> None:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          }
+        },
+        "grade": "B",
+        "judgements": [
+          {
+            "fn": "validator_fn",
+            "id": "J1",
+            "label": "RECOMPUTES",
+            "line_start": 1047,
+            "quote": "linter = _LinterEngine(norm_text)\n            try:\n                val_mode, val_findings, val_counts, val_call_sites = linter.run()",
+            "quote_verified": true,
+            "site": 0
+          },
+          {
+            "fn": "validator_fn",
+            "id": "J2",
+            "label": "ENUM_OR_BUCKET",
+            "line_start": 1047,
+            "quote": "_, _, _, val_bucket = _compute_score_and_penalty(val_findings, val_judgements, truncated)\n            if val_bucket != lead_data.get(\"penalty_bucket\"):\n                return False",
+            "quote_verified": true,
+            "site": 0
+          },
+          {
+            "fn": "prompt_call",
+            "id": "J3",
+            "label": "NOT_ISOLATED",
+            "line_start": 1001,
+            "quote": "def prompt_call():\n                    return gl.nondet.exec_prompt(prompt_text)",
+            "quote_verified": true,
+            "site": 0
+          },
+          {
+            "fn": "validator_fn",
+            "id": "J3",
+            "label": "UNCLEAR",
+            "line_start": 1047,
+            "quote": "",
+            "quote_verified": false,
+            "site": 1
+          }
+        ],
+        "mode": "CONTRACT",
+        "model_penalty": 4,
+        "n": 1,
+        "responses": [],
+        "score": 90,
+        "sdk_pin": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+        "source_bytes": 66505,
+        "source_sha256": "8292c7ffd042fe70647ce593ebfb33728a00e3acc28eeb8b9d148947f7dbbf33",
+        "target_id": "09534c63a674",
+        "truncated": true,
+        "ts": 1792311252
+      }
+    },
+    "HygieneBadges": {
+      "label": "HygieneBadges Contract",
+      "series": "ConsensusLint Core",
+      "url": "https://raw.githubusercontent.com/huzyow155/consensus-lint-genlayer/main/contracts/HygieneBadges.py",
+      "tid": "810898e24e1d",
+      "registrationTxHash": "0x6238bdfb73237c1c228cc867d0e47eba09e075b71fcdc4bfe3dcdff66435f713",
+      "registrationAgreement": "4/5",
+      "auditTxHash": "0x5d0c1b8335f827acea81e9822835d149465f120baeb0ef281712fa261f55298c",
+      "auditAgreement": "3/5",
+      "summary": {
+        "id": "810898e24e1d",
+        "label": "HygieneBadges Contract",
+        "latest_grade": "A",
+        "latest_n": 1,
+        "latest_score": 94,
+        "latest_source_sha256": "64181bc3a3965e9427039a8dec504f0c25aeb4e7e9186b54ba426aadb5bb48b8",
+        "ref_kind": "MUTABLE_REF",
+        "truncated": false
+      },
+      "auditRecord": {
+        "at": "2026-10-18T08:15:01Z",
+        "auditor": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "findings": {
+          "CL06": {
+            "count": 1,
+            "items": [
+              {
+                "line": 161,
+                "snippet": "def refresh_badge(self, badge_id: str) -> None:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          },
+          "CL16": {
+            "count": 1,
+            "items": [
+              {
+                "line": 88,
+                "snippet": "def claim_badge(self, target_id: str, display_name: str) -> None:"
+              }
+            ],
+            "method": "HEURISTIC",
+            "severity": "MINOR"
+          }
+        },
+        "grade": "A",
+        "judgements": [],
+        "mode": "CONTRACT",
+        "model_penalty": 0,
+        "n": 1,
+        "responses": [],
+        "score": 94,
+        "sdk_pin": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+        "source_bytes": 8833,
+        "source_sha256": "64181bc3a3965e9427039a8dec504f0c25aeb4e7e9186b54ba426aadb5bb48b8",
+        "target_id": "810898e24e1d",
+        "truncated": false,
+        "ts": 1792311301
+      }
+    }
+  },
+  "maintainer_responses": [
+    {
+      "tid": "9bd135be77a6",
+      "n": 1,
+      "rule_id": "CL05",
+      "note": "Acknowledged: TreeMap lazy initialization will be adopted in next patch.",
+      "txHash": "0x597108fa1eb8ac3c314a8fd2de20dbc80391b9fc74a176d37cf834016a2768f3",
+      "elapsed": 5.52,
+      "agreement": "3/5",
+      "stored_responses": []
+    },
+    {
+      "tid": "9bd135be77a6",
+      "n": 1,
+      "rule_id": "CL05",
+      "note": "Acknowledged: TreeMap lazy initialization will be adopted in next patch.",
+      "txHash": "0xc5e3fd89148e8256c8226f0fc36e044523daec03dd7399fcafcc6c6d5f1aed2d",
+      "elapsed": 6.01,
+      "agreement": "3/5",
+      "stored_responses": []
+    }
+  ],
+  "badges": {
+    "good_contract": {
+      "badge_id": "530360cf70b6",
+      "claimTxHash": "0x57a58324c86f1e0d951d66d82a0045ca584b951b1ed26a8d64ee812794588a03",
+      "agreement": "3/5",
+      "elapsed": 8.76,
+      "record": {
+        "badge_history": [
+          {
+            "at": "2026-10-18T08:15:31Z",
+            "grade": "A",
+            "score": 94,
+            "source_sha256": "1079ccc7c3fac6c7e365b153c0ac1165bad0f7551d9c06e11df5283dab719d77",
+            "transition": "INITIAL"
+          }
+        ],
+        "claimed_at": "2026-10-18T08:15:31Z",
+        "claimer": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "current_grade": "A",
+        "current_score": 94,
+        "current_status": "BADGE_A",
+        "display_name": "GoodContract Official Badge",
+        "id": "530360cf70b6",
+        "target_id": "2bac0b36b071"
+      }
+    },
+    "ConsensusLint": {
+      "badge_id": "a3ac759ddcec",
+      "claimTxHash": "0x4d40c3c8e661a16b62e3a9a57e1ddeef9c317d16283c979338a1488b459a9766",
+      "agreement": "4/5",
+      "elapsed": 8.68,
+      "record": {
+        "badge_history": [
+          {
+            "at": "2026-10-18T08:17:02Z",
+            "grade": "B",
+            "score": 90,
+            "source_sha256": "8292c7ffd042fe70647ce593ebfb33728a00e3acc28eeb8b9d148947f7dbbf33",
+            "transition": "INITIAL"
+          }
+        ],
+        "claimed_at": "2026-10-18T08:17:02Z",
+        "claimer": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "current_grade": "B",
+        "current_score": 90,
+        "current_status": "BADGE_B",
+        "display_name": "ConsensusLint Core Badge",
+        "id": "a3ac759ddcec",
+        "target_id": "09534c63a674"
+      }
+    },
+    "evolving_contract": {
+      "badge_id": "9e019f3c3320",
+      "claimTxHash": "0x5fdfc763c98567dd41bd26dfa2b65ada08b809446b8339c717be987fecd84fa3",
+      "agreement": "3/5",
+      "elapsed": 6.2,
+      "record": {
+        "badge_history": [
+          {
+            "at": "2026-10-18T08:19:40Z",
+            "grade": "A",
+            "score": 100,
+            "source_sha256": "8d06354a181741817ea9fcfa85ac3959493299073e60b21edbf420e51e3258ec",
+            "transition": "INITIAL"
+          }
+        ],
+        "claimed_at": "2026-10-18T08:19:40Z",
+        "claimer": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+        "current_grade": "A",
+        "current_score": 100,
+        "current_status": "BADGE_A",
+        "display_name": "EvolvingContract Badge",
+        "id": "9e019f3c3320",
+        "target_id": "2a4fabcda5ed"
+      }
+    }
+  },
+  "negative_tests": [
+    {
+      "testId": "NEG-01",
+      "description": "Reject URL with unauthorized host",
+      "txHash": "0xb1d53c7634f3e7be8eb6460b546defae34f6879dd7074fccd22ac3c52fde9d25",
+      "status": "ACCEPTED",
+      "leaderExecution": "ERROR",
+      "decodedError": "source host not allowed",
+      "expectedPattern": "source host not allowed",
+      "passed": true
+    },
+    {
+      "testId": "NEG-02",
+      "description": "Reject duplicate target registration by same sender",
+      "txHash": "0x5ca4ed2438bf2ba112290f0a181e4b671c3c6c8db5943e2c12c45c783969529a",
+      "status": "ACCEPTED",
+      "leaderExecution": "ERROR",
+      "decodedError": "target already registered",
+      "expectedPattern": "target already registered",
+      "passed": true
+    },
+    {
+      "testId": "NEG-03",
+      "description": "Enforce 300-second audit cooldown on rapid re-audit",
+      "txHash": "0x629c753f7d87c55a6b3c1405b56146b0a1118249bcf6c8dd984c6363ff39c6d5",
+      "status": "ACCEPTED",
+      "leaderExecution": "ERROR",
+      "decodedError": "audit cooldown active",
+      "expectedPattern": "audit cooldown active",
+      "passed": true
+    },
+    {
+      "testId": "NEG-04",
+      "description": "Reject finding response from non-registrant sender",
+      "txHash": "0xedf2a32d360a54489f8baff5a8d449de4d44efd16c75f962431a13a5000e5f47",
+      "status": "ACCEPTED",
+      "leaderExecution": "ERROR",
+      "decodedError": "only target registrant can respond",
+      "expectedPattern": "only target registrant can respond",
+      "passed": true
+    },
+    {
+      "testId": "NEG-05",
+      "description": "Reject badge claim for non-existent target ID",
+      "txHash": "0x31d77098819383c968b5f16c2a543c16e710c2edd640bb0d3ae5ab2ffa825c14",
+      "status": "ACCEPTED",
+      "leaderExecution": "ERROR",
+      "decodedError": "target not found in ledger",
+      "expectedPattern": "target not found in ledger",
+      "passed": true
+    }
+  ],
+  "evolving_progress": {
+    "grade_after": "A",
+    "grade_before": "B",
+    "has_progress": true,
+    "newer_n": 2,
+    "newer_sha256": "8d06354a181741817ea9fcfa85ac3959493299073e60b21edbf420e51e3258ec",
+    "older_n": 1,
+    "older_sha256": "0efc8681b2c5497607109bf017e3cff3ca49c5e22f934ebc726afc911544b3d9",
+    "rule_deltas": {
+      "CL15": {
+        "after": 0,
+        "before": 1,
+        "delta": -1
+      },
+      "CL16": {
+        "after": 0,
+        "before": 2,
+        "delta": -2
+      },
+      "CL17": {
+        "after": 0,
+        "before": 1,
+        "delta": -1
+      }
+    },
+    "score_after": 100,
+    "score_before": 83,
+    "score_delta": 17,
+    "target_id": "2a4fabcda5ed"
+  },
+  "ecosystem_views": {
+    "board": {
+      "best": [
+        {
+          "grade": "B",
+          "id": "dca608d38708",
+          "label": "ShellLike Large Fixture",
+          "score": 100
+        },
+        {
+          "grade": "A",
+          "id": "2a4fabcda5ed",
+          "label": "EvolvingContract Fixture",
+          "score": 100
+        },
+        {
+          "grade": "A",
+          "id": "2bac0b36b071",
+          "label": "GoodContract Fixture",
+          "score": 94
+        },
+        {
+          "grade": "A",
+          "id": "810898e24e1d",
+          "label": "HygieneBadges Contract",
+          "score": 94
+        },
+        {
+          "grade": "B",
+          "id": "09534c63a674",
+          "label": "ConsensusLint Ledger Contract",
+          "score": 90
+        },
+        {
+          "grade": "B",
+          "id": "c3e533a5f89e",
+          "label": "MixedContract Fixture",
+          "score": 86
+        },
+        {
+          "grade": "F",
+          "id": "9bd135be77a6",
+          "label": "BadContract Fixture",
+          "score": 0
+        }
+      ],
+      "most_improved": [
+        {
+          "delta": 17,
+          "first_score": 83,
+          "id": "2a4fabcda5ed",
+          "label": "EvolvingContract Fixture",
+          "latest_score": 100
+        },
+        {
+          "delta": 0,
+          "first_score": 94,
+          "id": "2bac0b36b071",
+          "label": "GoodContract Fixture",
+          "latest_score": 94
+        }
+      ]
+    },
+    "rule_stats": {
+      "CL01": {
+        "name": "Missing or invalid version header",
+        "severity": "MINOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL02": {
+        "name": "Missing or invalid py-genlayer dependency pin",
+        "severity": "MAJOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL03": {
+        "name": "Non-ASCII characters in contract source",
+        "severity": "MINOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL04": {
+        "name": "Not a GenLayer contract class",
+        "severity": "INFO",
+        "share_pct": 0,
+        "targets_scored_total": 7,
+        "targets_with_finding": 0
+      },
+      "CL05": {
+        "name": "TreeMap assignment in __init__",
+        "severity": "MAJOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL06": {
+        "name": "Unbounded list load-append-store pattern",
+        "severity": "MINOR",
+        "share_pct": 42.86,
+        "targets_scored_total": 7,
+        "targets_with_finding": 3
+      },
+      "CL07": {
+        "name": "strict_eq on dynamic payload or free-text",
+        "severity": "MAJOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL08": {
+        "name": "Non-deterministic call outside consensus wrapper",
+        "severity": "MAJOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL09": {
+        "name": "Validator does not recompute verdict",
+        "severity": "CRITICAL",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL10": {
+        "name": "Validator accesses calldata without Return check",
+        "severity": "MAJOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL11": {
+        "name": "Validator waves through failures in except handler",
+        "severity": "MAJOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL12": {
+        "name": "Silent default fallback on model parse failure",
+        "severity": "MAJOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL13": {
+        "name": "Wall-clock time call used",
+        "severity": "MAJOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL14": {
+        "name": "Generic exception or assert in public methods",
+        "severity": "MINOR",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      },
+      "CL15": {
+        "name": "URL validation by substring or prefix check",
+        "severity": "MAJOR",
+        "share_pct": 28.57,
+        "targets_scored_total": 7,
+        "targets_with_finding": 2
+      },
+      "CL16": {
+        "name": "Unbounded string parameter in public write method",
+        "severity": "MINOR",
+        "share_pct": 57.14,
+        "targets_scored_total": 7,
+        "targets_with_finding": 4
+      },
+      "CL17": {
+        "name": "Unpaginated view method iterating collection",
+        "severity": "MINOR",
+        "share_pct": 28.57,
+        "targets_scored_total": 7,
+        "targets_with_finding": 2
+      },
+      "CL18": {
+        "name": "Public parameter in prompt without sanitization",
+        "severity": "INFO",
+        "share_pct": 14.29,
+        "targets_scored_total": 7,
+        "targets_with_finding": 1
+      }
+    },
+    "meta": {
+      "audits_total": "10",
+      "nonce": "8",
+      "targets_scored_total": "7",
+      "targets_total": "8"
+    },
+    "fixtures_series": [
+      {
+        "id": "2bac0b36b071",
+        "label": "GoodContract Fixture",
+        "series": "Fixtures",
+        "ref": "main",
+        "latest_grade": "A",
+        "latest_score": 94,
+        "latest_n": 2,
+        "registered_at": "2026-10-18T08:07:49Z"
+      },
+      {
+        "id": "9bd135be77a6",
+        "label": "BadContract Fixture",
+        "series": "Fixtures",
+        "ref": "main",
+        "latest_grade": "F",
+        "latest_score": 0,
+        "latest_n": 1,
+        "registered_at": "2026-10-18T08:08:28Z"
+      },
+      {
+        "id": "c3e533a5f89e",
+        "label": "MixedContract Fixture",
+        "series": "Fixtures",
+        "ref": "main",
+        "latest_grade": "B",
+        "latest_score": 86,
+        "latest_n": 1,
+        "registered_at": "2026-10-18T08:09:08Z"
+      },
+      {
+        "id": "fc8f14409f6b",
+        "label": "NotAContract Fixture",
+        "series": "Fixtures",
+        "ref": "main",
+        "latest_grade": "N/A",
+        "latest_score": -1,
+        "latest_n": 1,
+        "registered_at": "2026-10-18T08:12:32Z"
+      },
+      {
+        "id": "dca608d38708",
+        "label": "ShellLike Large Fixture",
+        "series": "Fixtures",
+        "ref": "main",
+        "latest_grade": "B",
+        "latest_score": 100,
+        "latest_n": 1,
+        "registered_at": "2026-10-18T08:13:05Z"
+      },
+      {
+        "id": "2a4fabcda5ed",
+        "label": "EvolvingContract Fixture",
+        "series": "Fixtures",
+        "ref": "main",
+        "latest_grade": "A",
+        "latest_score": 100,
+        "latest_n": 2,
+        "registered_at": "2026-10-18T08:13:30Z"
+      }
+    ],
+    "core_series": [
+      {
+        "id": "09534c63a674",
+        "label": "ConsensusLint Ledger Contract",
+        "series": "ConsensusLint Core",
+        "ref": "main",
+        "latest_grade": "B",
+        "latest_score": 90,
+        "latest_n": 1,
+        "registered_at": "2026-10-18T08:13:59Z"
+      },
+      {
+        "id": "810898e24e1d",
+        "label": "HygieneBadges Contract",
+        "series": "ConsensusLint Core",
+        "ref": "main",
+        "latest_grade": "A",
+        "latest_score": 94,
+        "latest_n": 1,
+        "registered_at": "2026-10-18T08:14:51Z"
+      }
+    ]
+  }
+}
