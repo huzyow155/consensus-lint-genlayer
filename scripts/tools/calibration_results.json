@@ -1,0 +1,1387 @@
+{
+  "rule_stats": {
+    "CL01": {
+      "name": "Missing or invalid version header",
+      "severity": "MINOR",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL02": {
+      "name": "Missing or invalid py-genlayer dependency pin",
+      "severity": "MAJOR",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL03": {
+      "name": "Non-ASCII characters in contract source",
+      "severity": "MINOR",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL04": {
+      "name": "Not a GenLayer contract class",
+      "severity": "INFO",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL05": {
+      "name": "TreeMap assignment in __init__",
+      "severity": "MAJOR",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL06": {
+      "name": "Unbounded list load-append-store pattern in write method",
+      "severity": "MINOR",
+      "method": "HEURISTIC",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL07": {
+      "name": "strict_eq used over dynamic payload or free-text",
+      "severity": "MAJOR",
+      "method": "HEURISTIC",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL08": {
+      "name": "Non-deterministic call outside consensus wrapper",
+      "severity": "MAJOR",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL09": {
+      "name": "Validator does not recompute verdict or returns True unconditionally",
+      "severity": "CRITICAL",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL10": {
+      "name": "Validator accesses leader calldata without gl.vm.Return check",
+      "severity": "MAJOR",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL11": {
+      "name": "Validator waves through failures in except handler",
+      "severity": "MAJOR",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL12": {
+      "name": "Silent default fallback on model parse failure",
+      "severity": "MAJOR",
+      "method": "HEURISTIC",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL13": {
+      "name": "Wall-clock time call used instead of chain clock",
+      "severity": "MAJOR",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL14": {
+      "name": "Generic exception or assert used instead of gl.vm.UserError",
+      "severity": "MINOR",
+      "method": "STRUCTURAL",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL15": {
+      "name": "URL validation by substring or prefix check without urllib.parse",
+      "severity": "MAJOR",
+      "method": "HEURISTIC",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL16": {
+      "name": "Unbounded string parameter in public write method",
+      "severity": "MINOR",
+      "method": "HEURISTIC",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL17": {
+      "name": "Unpaginated view method iterating collection",
+      "severity": "MINOR",
+      "method": "HEURISTIC",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    },
+    "CL18": {
+      "name": "Public parameter in prompt without visible sanitization",
+      "severity": "INFO",
+      "method": "HEURISTIC",
+      "pass_expected": 2,
+      "pass_correct": 2,
+      "fail_expected": 2,
+      "fail_correct": 2
+    }
+  },
+  "history_timeline": [
+    {
+      "series": "CommitmentLedger",
+      "version": "v1.0.0",
+      "commit": "55514ea5c7ff724a79b99694bca90bec9fb6e44e",
+      "file": "contracts/CommitmentLedger.py",
+      "mode": "CONTRACT",
+      "score": 72,
+      "grade": "C",
+      "findings": {
+        "CL06": 1,
+        "CL16": 4,
+        "CL07": 2
+      },
+      "findings_raw": {
+        "CL06": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 49,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            }
+          ]
+        },
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 4,
+          "items": [
+            {
+              "line": 49,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            },
+            {
+              "line": 49,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            },
+            {
+              "line": 114,
+              "snippet": "def submit_resolution(self, commitment_id: str, evidence_text: str) -> None:"
+            },
+            {
+              "line": 114,
+              "snippet": "def submit_resolution(self, commitment_id: str, evidence_text: str) -> None:"
+            }
+          ]
+        },
+        "CL07": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 2,
+          "items": [
+            {
+              "line": 85,
+              "snippet": "consensus_extract = gl.eq_principle.strict_eq(run_extraction)"
+            },
+            {
+              "line": 180,
+              "snippet": "consensus_res = gl.eq_principle.strict_eq(run_resolution_check)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "series": "CommitmentLedger",
+      "version": "v2.0.0",
+      "commit": "4490cddec15955eb726dd018be3a95f34a39d5c5",
+      "file": "contracts/CommitmentLedger.py",
+      "mode": "CONTRACT",
+      "score": 64,
+      "grade": "D",
+      "findings": {
+        "CL06": 1,
+        "CL16": 4,
+        "CL07": 2,
+        "CL12": 1
+      },
+      "findings_raw": {
+        "CL06": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 145,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            }
+          ]
+        },
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 4,
+          "items": [
+            {
+              "line": 145,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            },
+            {
+              "line": 145,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            },
+            {
+              "line": 213,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            },
+            {
+              "line": 213,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            }
+          ]
+        },
+        "CL07": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 2,
+          "items": [
+            {
+              "line": 182,
+              "snippet": "consensus_extract = gl.eq_principle.strict_eq(run_extraction)"
+            },
+            {
+              "line": 298,
+              "snippet": "consensus_res = gl.eq_principle.strict_eq(run_resolution_check)"
+            }
+          ]
+        },
+        "CL12": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 125,
+              "snippet": "try:"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "series": "CommitmentLedger",
+      "version": "v2.1.0",
+      "commit": "4fbef50953eb69e7f15bc308ad5b1509162caa46",
+      "file": "contracts/CommitmentLedger.py",
+      "mode": "CONTRACT",
+      "score": 64,
+      "grade": "D",
+      "findings": {
+        "CL06": 1,
+        "CL16": 4,
+        "CL07": 2,
+        "CL12": 1
+      },
+      "findings_raw": {
+        "CL06": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 171,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            }
+          ]
+        },
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 4,
+          "items": [
+            {
+              "line": 171,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            },
+            {
+              "line": 171,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            },
+            {
+              "line": 241,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            },
+            {
+              "line": 241,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            }
+          ]
+        },
+        "CL07": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 2,
+          "items": [
+            {
+              "line": 210,
+              "snippet": "consensus_extract = gl.eq_principle.strict_eq(run_extraction)"
+            },
+            {
+              "line": 324,
+              "snippet": "consensus_res = gl.eq_principle.strict_eq(run_resolution_check)"
+            }
+          ]
+        },
+        "CL12": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 151,
+              "snippet": "try:"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "series": "CommitmentLedger",
+      "version": "v2.2.0",
+      "commit": "2b73b02c9983acc27f6eeadaae81bae72090e2a6",
+      "file": "contracts/CommitmentLedger.py",
+      "mode": "CONTRACT",
+      "score": 64,
+      "grade": "D",
+      "findings": {
+        "CL06": 1,
+        "CL16": 4,
+        "CL07": 2,
+        "CL12": 1
+      },
+      "findings_raw": {
+        "CL06": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 171,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            }
+          ]
+        },
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 4,
+          "items": [
+            {
+              "line": 171,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            },
+            {
+              "line": 171,
+              "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+            },
+            {
+              "line": 241,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            },
+            {
+              "line": 241,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            }
+          ]
+        },
+        "CL07": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 2,
+          "items": [
+            {
+              "line": 210,
+              "snippet": "consensus_extract = gl.eq_principle.strict_eq(run_extraction)"
+            },
+            {
+              "line": 324,
+              "snippet": "consensus_res = gl.eq_principle.strict_eq(run_resolution_check)"
+            }
+          ]
+        },
+        "CL12": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 151,
+              "snippet": "try:"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "series": "CommitmentLedger",
+      "version": "v3.0.0",
+      "commit": "0aeab14563f2173f6d418415cb861bae996bdb02",
+      "file": "contracts/CommitmentLedger.py",
+      "mode": "CONTRACT",
+      "score": 74,
+      "grade": "C",
+      "findings": {
+        "CL06": 3,
+        "CL16": 5,
+        "CL12": 1
+      },
+      "findings_raw": {
+        "CL06": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 3,
+          "items": [
+            {
+              "line": 324,
+              "snippet": "def register_commitment("
+            },
+            {
+              "line": 451,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            },
+            {
+              "line": 491,
+              "snippet": "def challenge_resolution(self, commitment_id: str, reason: str, source_url: str) -> None:"
+            }
+          ]
+        },
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 5,
+          "items": [
+            {
+              "line": 324,
+              "snippet": "def register_commitment("
+            },
+            {
+              "line": 324,
+              "snippet": "def register_commitment("
+            },
+            {
+              "line": 324,
+              "snippet": "def register_commitment("
+            },
+            {
+              "line": 451,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            },
+            {
+              "line": 451,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            }
+          ]
+        },
+        "CL12": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 304,
+              "snippet": "try:"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "series": "CommitmentLedger",
+      "version": "v3.1.0",
+      "commit": "616d92d6abaae6771b3cdc6bdc738150a1f324c3",
+      "file": "contracts/CommitmentLedger.py",
+      "mode": "CONTRACT",
+      "score": 74,
+      "grade": "C",
+      "findings": {
+        "CL06": 3,
+        "CL16": 5,
+        "CL12": 1
+      },
+      "findings_raw": {
+        "CL06": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 3,
+          "items": [
+            {
+              "line": 394,
+              "snippet": "def register_commitment("
+            },
+            {
+              "line": 537,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            },
+            {
+              "line": 580,
+              "snippet": "def challenge_resolution(self, commitment_id: str, reason: str, source_url: str) -> None:"
+            }
+          ]
+        },
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 5,
+          "items": [
+            {
+              "line": 394,
+              "snippet": "def register_commitment("
+            },
+            {
+              "line": 394,
+              "snippet": "def register_commitment("
+            },
+            {
+              "line": 394,
+              "snippet": "def register_commitment("
+            },
+            {
+              "line": 537,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            },
+            {
+              "line": 537,
+              "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+            }
+          ]
+        },
+        "CL12": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 374,
+              "snippet": "try:"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "series": "CitationWatch",
+      "version": "v1.0.0",
+      "commit": "db7efa656f3ceb14d40b3607f1037fdcbcfdf6ef",
+      "file": "contracts/SourceDriftLedger.py",
+      "mode": "CONTRACT",
+      "score": 59,
+      "grade": "D",
+      "findings": {
+        "CL16": 5,
+        "CL07": 2,
+        "CL12": 3
+      },
+      "findings_raw": {
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 5,
+          "items": [
+            {
+              "line": 526,
+              "snippet": "def register_citation(self, label: str, baseline_url: str, quotes_json: str) -> None:"
+            },
+            {
+              "line": 526,
+              "snippet": "def register_citation(self, label: str, baseline_url: str, quotes_json: str) -> None:"
+            },
+            {
+              "line": 526,
+              "snippet": "def register_citation(self, label: str, baseline_url: str, quotes_json: str) -> None:"
+            },
+            {
+              "line": 678,
+              "snippet": "def audit_citation(self, citation_id: str, target_url: str) -> None:"
+            },
+            {
+              "line": 678,
+              "snippet": "def audit_citation(self, citation_id: str, target_url: str) -> None:"
+            }
+          ]
+        },
+        "CL07": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 2,
+          "items": [
+            {
+              "line": 621,
+              "snippet": "consensus_res = gl.eq_principle.strict_eq(run_baseline_fetch)"
+            },
+            {
+              "line": 921,
+              "snippet": "consensus_res = gl.eq_principle.strict_eq(run_audit_evaluation)"
+            }
+          ]
+        },
+        "CL12": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 3,
+          "items": [
+            {
+              "line": 501,
+              "snippet": "try:"
+            },
+            {
+              "line": 515,
+              "snippet": "try:"
+            },
+            {
+              "line": 578,
+              "snippet": "try:"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "series": "CitationWatch",
+      "version": "v1.1.0",
+      "commit": "fe0e1b82bf9dc51b1dbb2c7ad61fc4cb3883971a",
+      "file": "contracts/SourceDriftLedger.py",
+      "mode": "CONTRACT",
+      "score": 83,
+      "grade": "B",
+      "findings": {
+        "CL16": 5,
+        "CL07": 1
+      },
+      "findings_raw": {
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 5,
+          "items": [
+            {
+              "line": 582,
+              "snippet": "def register_citation(self, label: str, baseline_url: str, quotes_json: str) -> None:"
+            },
+            {
+              "line": 582,
+              "snippet": "def register_citation(self, label: str, baseline_url: str, quotes_json: str) -> None:"
+            },
+            {
+              "line": 582,
+              "snippet": "def register_citation(self, label: str, baseline_url: str, quotes_json: str) -> None:"
+            },
+            {
+              "line": 703,
+              "snippet": "def audit_citation(self, citation_id: str, target_url: str) -> None:"
+            },
+            {
+              "line": 703,
+              "snippet": "def audit_citation(self, citation_id: str, target_url: str) -> None:"
+            }
+          ]
+        },
+        "CL07": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 650,
+              "snippet": "consensus_res = gl.eq_principle.strict_eq(run_baseline_fetch)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "series": "CitationWatch",
+      "version": "v1.2.0",
+      "commit": "7726ce992fd39ac1239165c02e527456f052a697",
+      "file": "contracts/SourceDriftLedger.py",
+      "mode": "CONTRACT",
+      "score": 80,
+      "grade": "B",
+      "findings": {
+        "CL16": 5,
+        "CL06": 1,
+        "CL12": 1
+      },
+      "findings_raw": {
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 5,
+          "items": [
+            {
+              "line": 725,
+              "snippet": "def register_citation(self, label: str, baseline_url: str, quotes_json: str) -> None:"
+            },
+            {
+              "line": 725,
+              "snippet": "def register_citation(self, label: str, baseline_url: str, quotes_json: str) -> None:"
+            },
+            {
+              "line": 725,
+              "snippet": "def register_citation(self, label: str, baseline_url: str, quotes_json: str) -> None:"
+            },
+            {
+              "line": 907,
+              "snippet": "def audit_citation(self, citation_id: str, target_url: str) -> None:"
+            },
+            {
+              "line": 907,
+              "snippet": "def audit_citation(self, citation_id: str, target_url: str) -> None:"
+            }
+          ]
+        },
+        "CL06": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 907,
+              "snippet": "def audit_citation(self, citation_id: str, target_url: str) -> None:"
+            }
+          ]
+        },
+        "CL12": {
+          "severity": "MAJOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 561,
+              "snippet": "try:"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "series": "GuardArena",
+      "version": "current",
+      "commit": "1d05532db56c04d7f5b6b86ce89a1fe2d9c9188e",
+      "file": "contracts/GuardArena.py",
+      "mode": "CONTRACT",
+      "score": 85,
+      "grade": "B",
+      "findings": {
+        "CL06": 2,
+        "CL16": 5
+      },
+      "findings_raw": {
+        "CL06": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 2,
+          "items": [
+            {
+              "line": 149,
+              "snippet": "def register_guard(self, name: str, policy: str, token: str, parent_guard_id: str) -> None:"
+            },
+            {
+              "line": 295,
+              "snippet": "def attempt_breach(self, guard_id: str, attack_text: str) -> None:"
+            }
+          ]
+        },
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 5,
+          "items": [
+            {
+              "line": 149,
+              "snippet": "def register_guard(self, name: str, policy: str, token: str, parent_guard_id: str) -> None:"
+            },
+            {
+              "line": 149,
+              "snippet": "def register_guard(self, name: str, policy: str, token: str, parent_guard_id: str) -> None:"
+            },
+            {
+              "line": 149,
+              "snippet": "def register_guard(self, name: str, policy: str, token: str, parent_guard_id: str) -> None:"
+            },
+            {
+              "line": 149,
+              "snippet": "def register_guard(self, name: str, policy: str, token: str, parent_guard_id: str) -> None:"
+            },
+            {
+              "line": 295,
+              "snippet": "def attempt_breach(self, guard_id: str, attack_text: str) -> None:"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "public_examples": [
+    {
+      "name": "storage.py",
+      "url": "https://raw.githubusercontent.com/yeagerai/genlayer-simulator/c94072951e483510329670aa427fba3fa6944f45/examples/contracts/storage.py",
+      "mode": "CONTRACT",
+      "score": 94,
+      "grade": "A",
+      "findings": {
+        "CL01": 1,
+        "CL16": 1
+      },
+      "findings_raw": {
+        "CL01": {
+          "severity": "MINOR",
+          "method": "STRUCTURAL",
+          "count": 1,
+          "items": [
+            {
+              "line": 1,
+              "snippet": "# v0.3.0"
+            }
+          ]
+        },
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 22,
+              "snippet": "def update_storage(self, new_storage: str) -> None:"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "tip_jar.py",
+      "url": "https://raw.githubusercontent.com/yeagerai/genlayer-simulator/c94072951e483510329670aa427fba3fa6944f45/examples/contracts/tip_jar.py",
+      "mode": "CONTRACT",
+      "score": 97,
+      "grade": "A",
+      "findings": {
+        "CL01": 1
+      },
+      "findings_raw": {
+        "CL01": {
+          "severity": "MINOR",
+          "method": "STRUCTURAL",
+          "count": 1,
+          "items": [
+            {
+              "line": 1,
+              "snippet": "# v0.3.0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "wizard_of_coin.py",
+      "url": "https://raw.githubusercontent.com/yeagerai/genlayer-simulator/c94072951e483510329670aa427fba3fa6944f45/examples/contracts/wizard_of_coin.py",
+      "mode": "CONTRACT",
+      "score": 91,
+      "grade": "A",
+      "findings": {
+        "CL01": 1,
+        "CL16": 1,
+        "CL14": 1,
+        "CL18": 1
+      },
+      "findings_raw": {
+        "CL01": {
+          "severity": "MINOR",
+          "method": "STRUCTURAL",
+          "count": 1,
+          "items": [
+            {
+              "line": 1,
+              "snippet": "# v0.3.0"
+            }
+          ]
+        },
+        "CL16": {
+          "severity": "MINOR",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 15,
+              "snippet": "def ask_for_coin(self, request: str) -> None:"
+            }
+          ]
+        },
+        "CL14": {
+          "severity": "MINOR",
+          "method": "STRUCTURAL",
+          "count": 1,
+          "items": [
+            {
+              "line": 52,
+              "snippet": "assert isinstance(parsed_result[\"give_coin\"], bool)"
+            }
+          ]
+        },
+        "CL18": {
+          "severity": "INFO",
+          "method": "HEURISTIC",
+          "count": 1,
+          "items": [
+            {
+              "line": 43,
+              "snippet": "result = gl.nondet.exec_prompt(prompt)"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "manual_precision_review": {
+    "total_sampled": 35,
+    "total_confirmed": 35,
+    "overall_precision_pct": 100.0,
+    "per_rule_breakdown": {
+      "CL06": {
+        "confirmed": 7,
+        "unconfirmed": 0,
+        "total": 7
+      },
+      "CL16": {
+        "confirmed": 17,
+        "unconfirmed": 0,
+        "total": 17
+      },
+      "CL07": {
+        "confirmed": 8,
+        "unconfirmed": 0,
+        "total": 8
+      },
+      "CL12": {
+        "confirmed": 3,
+        "unconfirmed": 0,
+        "total": 3
+      }
+    },
+    "sample_items": [
+      {
+        "source": "CommitmentLedger v1.0.0",
+        "rule_id": "CL06",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 49,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v1.0.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 49,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v1.0.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 49,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v1.0.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 114,
+        "snippet": "def submit_resolution(self, commitment_id: str, evidence_text: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v1.0.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 114,
+        "snippet": "def submit_resolution(self, commitment_id: str, evidence_text: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v1.0.0",
+        "rule_id": "CL07",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 85,
+        "snippet": "consensus_extract = gl.eq_principle.strict_eq(run_extraction)"
+      },
+      {
+        "source": "CommitmentLedger v1.0.0",
+        "rule_id": "CL07",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 180,
+        "snippet": "consensus_res = gl.eq_principle.strict_eq(run_resolution_check)"
+      },
+      {
+        "source": "CommitmentLedger v2.0.0",
+        "rule_id": "CL06",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 145,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v2.0.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 145,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v2.0.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 145,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v2.0.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 213,
+        "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v2.0.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 213,
+        "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v2.0.0",
+        "rule_id": "CL07",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 182,
+        "snippet": "consensus_extract = gl.eq_principle.strict_eq(run_extraction)"
+      },
+      {
+        "source": "CommitmentLedger v2.0.0",
+        "rule_id": "CL07",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 298,
+        "snippet": "consensus_res = gl.eq_principle.strict_eq(run_resolution_check)"
+      },
+      {
+        "source": "CommitmentLedger v2.0.0",
+        "rule_id": "CL12",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 125,
+        "snippet": "try:"
+      },
+      {
+        "source": "CommitmentLedger v2.1.0",
+        "rule_id": "CL06",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 171,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v2.1.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 171,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v2.1.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 171,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v2.1.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 241,
+        "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v2.1.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 241,
+        "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v2.1.0",
+        "rule_id": "CL07",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 210,
+        "snippet": "consensus_extract = gl.eq_principle.strict_eq(run_extraction)"
+      },
+      {
+        "source": "CommitmentLedger v2.1.0",
+        "rule_id": "CL07",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 324,
+        "snippet": "consensus_res = gl.eq_principle.strict_eq(run_resolution_check)"
+      },
+      {
+        "source": "CommitmentLedger v2.1.0",
+        "rule_id": "CL12",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 151,
+        "snippet": "try:"
+      },
+      {
+        "source": "CommitmentLedger v2.2.0",
+        "rule_id": "CL06",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 171,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v2.2.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 171,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v2.2.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 171,
+        "snippet": "def register_commitment(self, raw_text: str, deadline_hint: str) -> str:"
+      },
+      {
+        "source": "CommitmentLedger v2.2.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 241,
+        "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v2.2.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 241,
+        "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v2.2.0",
+        "rule_id": "CL07",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 210,
+        "snippet": "consensus_extract = gl.eq_principle.strict_eq(run_extraction)"
+      },
+      {
+        "source": "CommitmentLedger v2.2.0",
+        "rule_id": "CL07",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 324,
+        "snippet": "consensus_res = gl.eq_principle.strict_eq(run_resolution_check)"
+      },
+      {
+        "source": "CommitmentLedger v2.2.0",
+        "rule_id": "CL12",
+        "severity": "MAJOR",
+        "method": "HEURISTIC",
+        "line": 151,
+        "snippet": "try:"
+      },
+      {
+        "source": "CommitmentLedger v3.0.0",
+        "rule_id": "CL06",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 324,
+        "snippet": "def register_commitment("
+      },
+      {
+        "source": "CommitmentLedger v3.0.0",
+        "rule_id": "CL06",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 451,
+        "snippet": "def submit_resolution(self, commitment_id: str, source_url: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v3.0.0",
+        "rule_id": "CL06",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 491,
+        "snippet": "def challenge_resolution(self, commitment_id: str, reason: str, source_url: str) -> None:"
+      },
+      {
+        "source": "CommitmentLedger v3.0.0",
+        "rule_id": "CL16",
+        "severity": "MINOR",
+        "method": "HEURISTIC",
+        "line": 324,
+        "snippet": "def register_commitment("
+      }
+    ]
+  },
+  "model_calibration": {
+    "total_excerpts": 15,
+    "stable_and_correct": 15,
+    "stability_rate_pct": 100.0,
+    "excerpts": [
+      {
+        "id": "EX01",
+        "q": "J1",
+        "label": "RECOMPUTES",
+        "code": "def val(r):\n    if not hasattr(r, 'calldata'): return False\n    sand = gl.vm.spawn_sandbox(lambda: gl.nondet.web.get('https://ex.com').body)\n    return sand.calldata == r.calldata"
+      },
+      {
+        "id": "EX02",
+        "q": "J1",
+        "label": "RECOMPUTES",
+        "code": "def val(r):\n    if not hasattr(r, 'calldata'): return False\n    val_h = hashlib.sha256(gl.nondet.web.get('https://ex.com').body).hexdigest()\n    return val_h == r.calldata"
+      },
+      {
+        "id": "EX03",
+        "q": "J1",
+        "label": "COMPARES_ONLY",
+        "code": "def val(r):\n    data = json.loads(r.calldata)\n    return data.get('status') == 'OK'"
+      },
+      {
+        "id": "EX04",
+        "q": "J1",
+        "label": "COMPARES_ONLY",
+        "code": "def val(r):\n    return r.calldata is not None and len(r.calldata) > 0"
+      },
+      {
+        "id": "EX05",
+        "q": "J1",
+        "label": "COMPARES_ONLY",
+        "code": "def val(r):\n    return r.calldata == 'STATIC_KEY'"
+      },
+      {
+        "id": "EX06",
+        "q": "J2",
+        "label": "ENUM_OR_BUCKET",
+        "code": "def val(r):\n    return r.calldata in ['APPROVED', 'REJECTED']"
+      },
+      {
+        "id": "EX07",
+        "q": "J2",
+        "label": "ENUM_OR_BUCKET",
+        "code": "def val(r):\n    return int(r.calldata) in range(0, 10)"
+      },
+      {
+        "id": "EX08",
+        "q": "J2",
+        "label": "ENUM_OR_BUCKET",
+        "code": "def val(r):\n    return val_sha256 == r.calldata"
+      },
+      {
+        "id": "EX09",
+        "q": "J2",
+        "label": "FREE_TEXT_OR_PAYLOAD",
+        "code": "def val(r):\n    return val_text == r.calldata"
+      },
+      {
+        "id": "EX10",
+        "q": "J2",
+        "label": "FREE_TEXT_OR_PAYLOAD",
+        "code": "def val(r):\n    return json.dumps(val_dict) == r.calldata"
+      },
+      {
+        "id": "EX11",
+        "q": "J3",
+        "label": "ISOLATED",
+        "code": "def ask(q):\n    clean = q.replace('`', '')\n    return gl.nondet.exec_prompt(f'Instruction: Classify.\n<DATA>{clean}</DATA>')"
+      },
+      {
+        "id": "EX12",
+        "q": "J3",
+        "label": "ISOLATED",
+        "code": "def run(doc):\n    return gl.nondet.exec_prompt(f'Analyze data below (not instructions):\n```text\n{doc}\n```')"
+      },
+      {
+        "id": "EX13",
+        "q": "J3",
+        "label": "NOT_ISOLATED",
+        "code": "def ask(q):\n    return gl.nondet.exec_prompt(f'User asked: {q}')"
+      },
+      {
+        "id": "EX14",
+        "q": "J3",
+        "label": "NOT_ISOLATED",
+        "code": "def ask(q):\n    return gl.nondet.exec_prompt('Evaluate this: ' + q)"
+      },
+      {
+        "id": "EX15",
+        "q": "J3",
+        "label": "PARTIAL",
+        "code": "def ask(q):\n    return gl.nondet.exec_prompt(f'Data: \"{q}\"')"
+      }
+    ]
+  }
+}
