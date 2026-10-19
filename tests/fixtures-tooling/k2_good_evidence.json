@@ -1,0 +1,9 @@
+{
+  "negative_tests": [
+    {
+      "testId": "NEG-TEST",
+      "leaderExecution": "ERROR",
+      "decodedError": "only the registrant can do this"
+    }
+  ]
+}

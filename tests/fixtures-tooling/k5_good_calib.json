@@ -1,0 +1,9 @@
+{
+  "model_calibration": {
+    "stable_and_correct": 1,
+    "runs": [
+      { "id": "EX01", "stable_and_correct": true },
+      { "id": "EX02", "stable_and_correct": false }
+    ]
+  }
+}

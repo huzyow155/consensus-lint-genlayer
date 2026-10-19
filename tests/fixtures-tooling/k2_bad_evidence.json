@@ -1,0 +1,9 @@
+{
+  "negative_tests": [
+    {
+      "testId": "NEG-TEST",
+      "leaderExecution": "ERROR",
+      "decodedError": "hallucinated error not in contract"
+    }
+  ]
+}

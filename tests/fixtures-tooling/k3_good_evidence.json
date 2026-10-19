@@ -1,0 +1,16 @@
+{
+  "maintainer_responses": [
+    {
+      "tid": "9bd135be77a6",
+      "n": 1,
+      "stored_responses": [
+        {
+          "by": "0xe2d9062adc5f4b6061788996f859b224a7a8745c",
+          "rule_id": "CL05",
+          "stance": "FIXED_NEXT",
+          "note": "Valid note"
+        }
+      ]
+    }
+  ]
+}

@@ -394,7 +394,7 @@ async function main() {
   const respTxHash = await retryCall(() => client.writeContract({
     address: lintAddress,
     functionName: 'respond_to_finding',
-    args: [badTid, 1, 'CL05', 'Acknowledged: TreeMap lazy initialization will be adopted in next patch.'],
+    args: [badTid, 1, 'CL05', 'FIXED_NEXT', 'Acknowledged: TreeMap lazy initialization will be adopted in next patch.'],
   }));
   console.log("Response Tx Hash:", respTxHash);
   const respTx = await waitReceiptWithRetry(respTxHash);
@@ -584,11 +584,11 @@ async function main() {
   await runNegativeTest(
     "NEG-04",
     "Reject finding response from non-registrant sender",
-    "only target registrant can respond",
+    "only the registrant can do this",
     () => strangerClient.writeContract({
       address: lintAddress,
       functionName: 'respond_to_finding',
-      args: [badTid, 1, 'CL05', 'Unauthorized intruder response attempt.'],
+      args: [badTid, 1, 'CL05', 'FIXED_NEXT', 'Unauthorized intruder response attempt.'],
     })
   );
   await sleep(2000);
